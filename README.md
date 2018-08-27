@@ -1,4 +1,5 @@
-参数表
+### 参数表
+
 |参数名|类型|是否必需|说明|
 |---|--|--|--|
 |tabId |string |是 |  |
@@ -11,10 +12,12 @@
 |onBeforeActive |function  |否 |  tab页切换前的回调，支持参数 (next, current) next： 即将跳转的tab页index，current：当前tab页的index|
 
 
-方法：
+### 方法：
 active(index) : 跳转到指定tab页
 
-html 模板
+### html 模板
+
+```
   <div id="tab1" class="im-tab">
     <div class="im-tab-hd">
       <a href="javascript:void(0);">tab1</a>
@@ -28,3 +31,4 @@ html 模板
       <div class="im-tab-panel">3</div>
     </div>
   </div>
+```
