@@ -1,0 +1,251 @@
+@charset "UTF-8";
+$borderBoxSwitch: false;
+
+// 覆盖颜色设置
+// --------------------------------------------------
+$primary: #188eee; //主色 蓝
+$colorBorder: #dedede;
+$colorBg: white;
+$colorText: black;
+
+//-----------------------------------------------------
+// tab
+//-----------------------------------------------------
+
+// 结构注释
+//-----------------------------------------------------
+// .im-tab
+//  .im-tab-hd // 两种样式tab-hd--border或tab-hd--bottom
+//      a // if active 追加class active
+//  .im-tab-bd
+//
+
+// 变量
+//-----------------------------------------------------
+$tabHeight: 40px !default;
+$tabActiveColor: $primary !default;
+$white: #fff;
+
+.tab {
+  // 头部
+  .hd {
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    font-size: 16px;
+    background: $colorBg;
+
+    a {
+      float: left;
+      text-align: center;
+      position: relative;
+      cursor: pointer;
+      text-decoration: none;
+
+      &.active:hover {
+        cursor: default;
+      }
+    }
+
+    // 高亮的粗线在顶部
+    &--border {
+      border-bottom: 1px solid $colorBorder;
+      height: $tabHeight;
+
+      a {
+        //width: 150px;
+        //max-width: 165px;
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
+        box-sizing: border-box;
+        padding-top: 5px;
+        line-height: $tabHeight - 5px;
+        color: $colorText;
+        background: $colorBg;
+
+        &.active {
+          color: $tabActiveColor;
+          border-color: $colorBorder;
+          line-height: $tabHeight - 4px;
+
+          &:after {
+            content: "";
+            height: 3px;
+            background: $tabActiveColor;
+            position: absolute;
+            left: -1px;
+            right: -1px;
+            top: 0;
+          }
+        }
+
+        &:hover {
+          color: $tabActiveColor;
+        }
+      }
+    }
+
+    // 高亮的细线在底部
+    &--bottom {
+      border-bottom: 1px solid $colorBorder;
+      line-height: $tabHeight;
+
+      a {
+        position: relative;
+        color: $colorText;
+        //width: 150px;
+
+        &:hover {
+          color: $tabActiveColor;
+        }
+
+        &.active {
+          color: $tabActiveColor;
+
+          &:after {
+            content: "";
+            width: 100%;
+            height: 3px;
+            background: $tabActiveColor;
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+          }
+        }
+      }
+    }
+
+    // 高亮的细线在顶部
+    &--top {
+      line-height: $tabHeight - 2px;
+
+      a {
+        position: relative;
+        color: $colorText;
+        //width: 150px;
+        border-top: 3px solid transparent;
+
+        &:hover {
+          color: $tabActiveColor;
+        }
+
+        &.active {
+          color: $tabActiveColor;
+          border-top-color: $tabActiveColor;
+        }
+      }
+    }
+
+    // 不指定宽度,适用长导航左对齐,居中对齐的情况
+    &--fit {
+      border-bottom: 1px solid $colorBorder;
+      line-height: $tabHeight + 10;
+
+      a {
+        position: relative;
+        color: $colorText;
+        padding: 0 15px;
+        margin-right: 30px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &:hover {
+          color: $tabActiveColor;
+        }
+
+        &.active {
+          color: $tabActiveColor;
+
+          &:after {
+            content: "";
+            width: 100%;
+            height: 3px;
+            background: $tabActiveColor;
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+          }
+        }
+      }
+    }
+
+    &--banner {
+      border-top: 1px solid $colorBorder;
+      line-height: $tabHeight + 20 - 2;
+    }
+
+    &--bookmark {
+      background-color: $colorBorder;
+
+      a {
+        // width: 140px;
+        background-color: $colorBorder;
+
+        &.active {
+          background: $white;
+          border-color: $white;
+        }
+      }
+    }
+
+    @for $i from 1 through 7 {
+      @if $i >= 5 {
+        .split-#{$i} {
+          width: percentage(1 / $i);
+        }
+      } @else {
+        .split-#{$i} {
+          width: percentage((1 - 1 / $i) / $i);
+
+          &:first-child {
+            margin-left: percentage(1 / $i / 2);
+          }
+        }
+      }
+    }
+
+    &--center {
+      //  .im-tab-hd--wrap {
+      // display: inline-block;
+      // text-align: center;
+      ////float: left;
+
+      a {
+        float: none;
+        text-align: center;
+        display: inline-block;
+      }
+      //}
+    }
+    &--auto {
+      display: flex;
+      direction: row;
+      a {
+        display: inline-block;
+        flex: 1;
+      }
+    }
+    &--fix {
+      a {
+        display: inline-block;
+        // width: 150px;
+      }
+    }
+  }
+
+  // panel 容器
+  .bd {
+    background: $colorBg;
+    // panel
+    .panel {
+      display: none;
+      &-show {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,5 +1,4 @@
-(function() {
-  const $ = window;
+(function($) {
   const opts = {
     tabType: "bottom",
     tabWidthType: "fix",
@@ -14,14 +13,14 @@
   var tab = new $.Tab(opts);
 
   //Tab 嵌套demo
-  
-  // const opts2 = {
-  //   tabType: "bottom",
-  //   stretch: true,
-  //   dispIndex: 2,
-  //   tabId: "tab2",
-  //   tabWidthType: "auto",
-  //   slider: true
-  // };
-  // var tab2 = new $.Tab(opts2);
-})();
+
+  const opts2 = {
+    tabType: "bottom",
+    stretch: true,
+    dispIndex: 2,
+    tabId: "tab2",
+    tabWidthType: "auto",
+    slider: true
+  };
+  var tab2 = new $.Tab(opts2);
+})(window);
