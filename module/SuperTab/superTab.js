@@ -53,11 +53,9 @@
       T.addClass(DOM.hdWrap, "hd--" + opts.tabType, "hd--" + opts.tabWidthType);
 
 
-
       var tabWrapWidth = DOM.wrap.clientWidth;
       var tabHdWidth = tabWrapWidth / opts.dispNum;
       var itemNum = DOM.navItem.length;
-
       DOM.hdBox.style.width = tabWrapWidth + "px";
       DOM.hdWrap.style.width = tabHdWidth * itemNum + "px";
 
