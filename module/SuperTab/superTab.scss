@@ -1,0 +1,110 @@
+@import "tab.scss";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.superTab {
+  position: relative;
+  .nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 150px;
+    border-right: 2px solid rgb(64, 195, 247);
+    margin-right: 10px;
+    a {
+      display: block;
+      text-decoration: none;
+      width: 100px;
+      height: 30px;
+      line-height: 30px;
+      background-color: #ccc;
+      color: black;
+      border-radius: 5px;
+      text-align: center;
+      &:hover {
+        background-color: rgb(64, 195, 247);
+      }
+      &:visited {
+        background-color: rgb(47, 174, 224);
+      }
+      margin: 20px auto;
+    }
+  }
+  .tab {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    position: relative;
+    margin-left: 162px;
+
+    .left,
+    .right {
+      position: absolute;
+      height: $tabHeight;
+      line-height: $tabHeight;
+      width: 20px;
+      text-align: center;
+      background-color: #ccc;
+      font-size: 20px;
+      font-style: bold;
+      top: 0;
+      z-index: 10;
+      cursor: pointer;
+    }
+    .left {
+      left: 0;
+    }
+    .right {
+      right: 0;
+    }
+    .hd-box {
+      //white-space: nowrap;
+      overflow: hidden;
+      height: $tabHeight;
+      position: relative;
+      border-bottom: 0.5px solid #ccc;
+    }
+    .hd {
+      overflow: hidden;
+      height: $tabHeight;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      a {
+        //width: 150px;
+        position: relative;
+      }
+      .close {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 20px;
+        width: 20px;
+        line-height: 20px;
+        border-radius: 10px;
+        background-color: #ccc;
+        font-size: 14px;
+        color: rgb(65, 63, 63);
+        &:hover {
+          background-color: red;
+        }
+      }
+    }
+    .bd {
+      position: absolute;
+      left: 0;
+      top: $tabHeight;
+    }
+    .more {
+      .close {
+        margin-right: 25px;
+      }
+    }
+  }
+}

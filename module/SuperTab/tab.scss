@@ -26,9 +26,9 @@ $tabHeight: 40px !default;
 $tabActiveColor: $primary !default;
 $white: #fff;
 
-.im-tab {
+.tab {
   // 头部
-  &-hd {
+  .hd {
     &::after {
       content: "";
       display: table;
@@ -238,15 +238,14 @@ $white: #fff;
   }
 
   // panel 容器
-  &-bd {
+  .bd {
     background: $colorBg;
-  }
-
-  // panel
-  &-panel {
-    display: none;
-    &-show {
-      display: block;
+    // panel
+    .panel {
+      display: none;
+      &-show {
+        display: block;
+      }
     }
   }
 }

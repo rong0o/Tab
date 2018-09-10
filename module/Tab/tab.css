@@ -1,15 +1,15 @@
-.im-tab-hd {
+.tab .hd {
   font-size: 16px;
   background: white;
 }
 
-.im-tab-hd::after {
+.tab .hd::after {
   content: "";
   display: table;
   clear: both;
 }
 
-.im-tab-hd a {
+.tab .hd a {
   float: left;
   text-align: center;
   position: relative;
@@ -17,16 +17,16 @@
   text-decoration: none;
 }
 
-.im-tab-hd a.active:hover {
+.tab .hd a.active:hover {
   cursor: default;
 }
 
-.im-tab-hd--border {
+.tab .hd--border {
   border-bottom: 1px solid #dedede;
   height: 40px;
 }
 
-.im-tab-hd--border a {
+.tab .hd--border a {
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
   box-sizing: border-box;
@@ -36,13 +36,13 @@
   background: white;
 }
 
-.im-tab-hd--border a.active {
+.tab .hd--border a.active {
   color: #188eee;
   border-color: #dedede;
   line-height: 36px;
 }
 
-.im-tab-hd--border a.active:after {
+.tab .hd--border a.active:after {
   content: "";
   height: 3px;
   background: #188eee;
@@ -52,29 +52,29 @@
   top: 0;
 }
 
-.im-tab-hd--border a:hover {
+.tab .hd--border a:hover {
   color: #188eee;
 }
 
-.im-tab-hd--bottom {
+.tab .hd--bottom {
   border-bottom: 1px solid #dedede;
   line-height: 40px;
 }
 
-.im-tab-hd--bottom a {
+.tab .hd--bottom a {
   position: relative;
   color: black;
 }
 
-.im-tab-hd--bottom a:hover {
+.tab .hd--bottom a:hover {
   color: #188eee;
 }
 
-.im-tab-hd--bottom a.active {
+.tab .hd--bottom a.active {
   color: #188eee;
 }
 
-.im-tab-hd--bottom a.active:after {
+.tab .hd--bottom a.active:after {
   content: "";
   width: 100%;
   height: 3px;
@@ -84,50 +84,50 @@
   left: 0;
 }
 
-.im-tab-hd--top {
+.tab .hd--top {
   line-height: 38px;
 }
 
-.im-tab-hd--top a {
+.tab .hd--top a {
   position: relative;
   color: black;
   border-top: 3px solid transparent;
 }
 
-.im-tab-hd--top a:hover {
+.tab .hd--top a:hover {
   color: #188eee;
 }
 
-.im-tab-hd--top a.active {
+.tab .hd--top a.active {
   color: #188eee;
   border-top-color: #188eee;
 }
 
-.im-tab-hd--fit {
+.tab .hd--fit {
   border-bottom: 1px solid #dedede;
   line-height: 50px;
 }
 
-.im-tab-hd--fit a {
+.tab .hd--fit a {
   position: relative;
   color: black;
   padding: 0 15px;
   margin-right: 30px;
 }
 
-.im-tab-hd--fit a:last-child {
+.tab .hd--fit a:last-child {
   margin-right: 0;
 }
 
-.im-tab-hd--fit a:hover {
+.tab .hd--fit a:hover {
   color: #188eee;
 }
 
-.im-tab-hd--fit a.active {
+.tab .hd--fit a.active {
   color: #188eee;
 }
 
-.im-tab-hd--fit a.active:after {
+.tab .hd--fit a.active:after {
   content: "";
   width: 100%;
   height: 3px;
@@ -137,96 +137,96 @@
   left: 0;
 }
 
-.im-tab-hd--banner {
+.tab .hd--banner {
   border-top: 1px solid #dedede;
   line-height: 58px;
 }
 
-.im-tab-hd--bookmark {
+.tab .hd--bookmark {
   background-color: #dedede;
 }
 
-.im-tab-hd--bookmark a {
+.tab .hd--bookmark a {
   background-color: #dedede;
 }
 
-.im-tab-hd--bookmark a.active {
+.tab .hd--bookmark a.active {
   background: #fff;
   border-color: #fff;
 }
 
-.im-tab-hd .split-1 {
+.tab .hd .split-1 {
   width: 0%;
 }
 
-.im-tab-hd .split-1:first-child {
+.tab .hd .split-1:first-child {
   margin-left: 50%;
 }
 
-.im-tab-hd .split-2 {
+.tab .hd .split-2 {
   width: 25%;
 }
 
-.im-tab-hd .split-2:first-child {
+.tab .hd .split-2:first-child {
   margin-left: 25%;
 }
 
-.im-tab-hd .split-3 {
+.tab .hd .split-3 {
   width: 22.22222%;
 }
 
-.im-tab-hd .split-3:first-child {
+.tab .hd .split-3:first-child {
   margin-left: 16.66667%;
 }
 
-.im-tab-hd .split-4 {
+.tab .hd .split-4 {
   width: 18.75%;
 }
 
-.im-tab-hd .split-4:first-child {
+.tab .hd .split-4:first-child {
   margin-left: 12.5%;
 }
 
-.im-tab-hd .split-5 {
+.tab .hd .split-5 {
   width: 20%;
 }
 
-.im-tab-hd .split-6 {
+.tab .hd .split-6 {
   width: 16.66667%;
 }
 
-.im-tab-hd .split-7 {
+.tab .hd .split-7 {
   width: 14.28571%;
 }
 
-.im-tab-hd--center a {
+.tab .hd--center a {
   float: none;
   text-align: center;
   display: inline-block;
 }
 
-.im-tab-hd--auto {
+.tab .hd--auto {
   display: flex;
   direction: row;
 }
 
-.im-tab-hd--auto a {
+.tab .hd--auto a {
   display: inline-block;
   flex: 1;
 }
 
-.im-tab-hd--fix a {
+.tab .hd--fix a {
   display: inline-block;
 }
 
-.im-tab-bd {
+.tab .bd {
   background: white;
 }
 
-.im-tab-panel {
+.tab .bd .panel {
   display: none;
 }
 
-.im-tab-panel-show {
+.tab .bd .panel-show {
   display: block;
 }
